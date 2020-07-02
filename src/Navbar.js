@@ -1,0 +1,29 @@
+import React from 'react';
+import * as ReactBootStrap from "react-bootstrap";
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
+
+const NavBar = () => {
+    return(
+        <div className="App">
+    <ReactBootStrap.Navbar collapseOnSelect expand="sm" bg="danger" variant="dark">
+  <ReactBootStrap.Navbar.Brand href="#home">Team Capacity</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+    <ReactBootStrap.Nav className="mr-auto"> 
+  
+    <ReactBootStrap.Nav.Link href="#features">Previous Sprint</ReactBootStrap.Nav.Link>
+  
+   
+    <ReactBootStrap.Nav.Link href="#pricing">Users</ReactBootStrap.Nav.Link>
+
+     </ReactBootStrap.Nav>
+    </ReactBootStrap.Navbar.Collapse>
+</ReactBootStrap.Navbar>
+        </div>
+    )
+}
+
+export default NavBar;
