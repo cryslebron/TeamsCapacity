@@ -50,14 +50,14 @@ class Form extends Component {
                     onChange={this.handleChange} />
                 <label htmlFor="time">Capacity per day</label>
                 <input 
-                    type="text" 
+                    type="number" 
                     name="time" 
                     id="time"
                     value={time} 
                     onChange={this.handleChange} />
                      <label htmlFor="pto">PTO/Holiday</label>
                 <input 
-                    type="text" 
+                    type="number" 
                     name="pto" 
                     id="pto"
                     value={pto} 

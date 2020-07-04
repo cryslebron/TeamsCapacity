@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import moment from "moment";
 import { DateRange } from "react-date-range";
 import "./Date.css";
-//import ReactDatePicker from "react-datepicker";
+
 
 export default class Main extends Component {
   constructor(props, context) {
@@ -11,7 +11,7 @@ export default class Main extends Component {
     this.state = {
       rangePicker: {
         startDate: moment(),
-        endDate: moment().add(7, "days")
+        endDate: moment().add(10, "days")
       },
       isShowCalendar: false
     };
@@ -43,7 +43,7 @@ export default class Main extends Component {
 
     return (
       <main>
-        <h1>Sprint Dates</h1>
+        <h1>Select Sprint Dates</h1>
         {isShowCalendar && (
           <div className="box-calendar">
             <div className="close" onClick={this.handleClickCloseCalendar}>

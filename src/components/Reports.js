@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Feature = () => {
+const Reports = () => {
     return(
         <div className="App">
-            <h1>Feature HOURS</h1>
+            <h1>Previous Sprint</h1>
         </div>
     )
 }
 
-export default Feature;
+export default Reports;

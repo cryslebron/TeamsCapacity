@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import NavBar from './Navbar';
-import Features from './Features';
-import Table from './Table';
-import Form from './Form';
-import SprintDate from './sprintCap'
-import DatePicker from './DatePicker';
+import NavBar from './components/Navbar';
+import Reports from './components/Reports';
+import Users from './components/Users';
+import Table from './components/Table';
+import Form from './components/Form';
+import SprintDate from './components/sprintCap'
+// import DatePicker from './DatePicker';
 import "react-datepicker/dist/react-datepicker.css";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
   } from "react-router-dom";
+import Calendar from './components/Calendar';
 
   
 
@@ -39,11 +41,7 @@ import {
     render() {
       
         const { characters } = this.state;
-        const styles = {
-            fontFamily: "sans-serif",
-            textAlign: "center"
-          };
-          
+        
           return (
            
        
@@ -52,32 +50,30 @@ import {
         <Router>
         <NavBar />
          <Switch>
-           <Route path="/features" component={Features}>
-              <Features />
-          </Route>
+         
+           <Route path="/components/Reports" component={Reports}/>
+           <Route path="/components/Users" component={Users}/>
+          
+          
+          
           </Switch>
             </Router>
             </div>
-            <div >
-            <div className="container">
+           
+           <div>
+                <div className="container">
                 <SprintDate />
              </div>
-             </div>
-          
-          <div className="container">
-            <div style={styles}>
-            <DatePicker/>
+       
+                  
+             <div className="container">
+         
+            <Calendar/>
             </div>
             </div>
-            {/* <form>
-            <label>
-    Sprint Duration:
-    <input type="number" name="Duration" />
-  </label>
-  <input type="submit" value="Submit" />
-</form> */}
-            <div> 
-            <div className="container">
+    
+         
+            <div className="container center border-black">
                 
               
                 <h1>Team Capacity </h1>
@@ -93,7 +89,7 @@ import {
             </div>
             </div>
             
-            </div>
+         
            
         );
     }
