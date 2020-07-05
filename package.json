@@ -1,7 +1,10 @@
 {
-  "name": "myapp",
+  "name": "teamcapacity",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.11.1"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -43,7 +46,24 @@
     ],
     "scripts": {
       "start": "node index.js"
-   }
-   
-  }
+    }
+  },
+  "description": "I've created an app to help me as a Scrum master to caluculate a Scrum team's capacity.  Before I was using an excel sheet in which each sprint I would Update. I have converted my Excel sheet into a site.  ExcelSheet  <img src =\"/src/Excel.png>",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryslebron/TeamsCapacity.git"
+  },
+  "keywords": [
+    "Team",
+    "capacity",
+    "scrum"
+  ],
+  "author": "Crystal Lebron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cryslebron/TeamsCapacity/issues"
+  },
+  "homepage": "https://github.com/cryslebron/TeamsCapacity#readme"
 }
