@@ -2,10 +2,6 @@ I've created an app to help me as a Scrum master to caluculate a Scrum team's ca
 Before I was using an excel sheet in which each sprint I would Update. I have converted my Excel sheet into a site. 
 ExcelSheet 
 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
