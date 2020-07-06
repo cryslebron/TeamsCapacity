@@ -5,7 +5,7 @@ const NavBar = () => {
     return(
         <div className="App">
     <ReactBootStrap.Navbar collapseOnSelect expand="sm" bg="danger" variant="dark">
-  <ReactBootStrap.Navbar.Brand href="/">Team Capacity</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Brand href="/app">Team Capacity</ReactBootStrap.Navbar.Brand>
   <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
     <ReactBootStrap.Nav className="mr-auto"> 
