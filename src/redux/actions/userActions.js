@@ -6,3 +6,5 @@ export function deleteUser(name) {
     return { type: "DELETE_USER", name };
 }
 //2 redux actions 
+
+

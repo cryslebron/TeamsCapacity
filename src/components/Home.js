@@ -1,32 +1,59 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Calendar from './Calendar';
+
 import Table from './Table';
-import Form from './Form';
-import SprintDate from './sprintCap'
+import { Link } from 'react-router-dom';
+import SprintDate from './sprintCap';
+import NewEmployee from './NewEmployee'
+import SprintTable from './SprintTable'
+
 import "react-datepicker/dist/react-datepicker.css";
 
 class Home extends Component {
+    constructor(props) {
+        super(props)
+        this.state={isOpen:false}
+    
+    }
+    toggleForm= () => {
+        this.setState(
+            {isOpen:!this.state.isOpen}
+        )
+
+    }
+
+    toggleForms= () => {
+        this.setState(
+            {isOpen:!this.state.isOpen}
+        )
+
+    }
     render() {
         return (
-            <div>
+            <div className="container">
+                 <h1>Team Capacity </h1>
                 <div>
                     <div className="container">
-                        <SprintDate />
+                     
+                       <SprintTable/>
+                       <button onClick={this.toggleForms}> Add new Sprint</button>
+        {this.state.isOpen && <SprintDate /> }  
+                        
                     </div>
-                    <div className="container">
-                        <Calendar />
-                    </div>
+                   
                 </div>
                 <div className="container center border-black">
-                    <h1>Team Capacity </h1>
+                   
                     <h2>
                         <p>TEAM</p>
                     </h2>
                     <Table />
-                    <h3>Add a New user</h3>
-                    <Form />
+                    <div className="container">
+                    <button onClick={this.toggleForm}> Add new Employee</button>
+        {this.state.isOpen && <NewEmployee/> }    
+                    
                 </div>
+            </div>
             </div>
         );
     }

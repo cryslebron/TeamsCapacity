@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as userActions from '../redux/actions/userActions';
 
-class Form extends Component {
+// const ErrorValidationLabel = ({ txtLbl }) => (
+//     <label htmlFor="" style={{ color: "red" }}>
+//         {txtLbl}
+//     </label>
+// );
+
+class user extends Component {
     constructor(props) {
         super(props);
 
@@ -16,7 +22,9 @@ class Form extends Component {
         };
 
         this.state = this.initialState;
+        
     }
+    
 //update state everytime that there is a change on any imput
     handleChange = event => {
         const { name, value } = event.target;
@@ -26,6 +34,7 @@ class Form extends Component {
     }
 //dispatch the Redux createUser action on submit
     onFormSubmit = (event) => {
+        alert('Employee Added!');
         event.preventDefault();
         this.props.dispatch(userActions.createUser(this.state.user))
         this.resetForm();
@@ -37,11 +46,16 @@ class Form extends Component {
         this.setState({ user });
     }
 
+
+
     render() {
         const { user } = this.state;
 
-        return (
-            <form onSubmit={this.onFormSubmit}>
+       
+           return (
+           
+            <div className="container">
+            <form onSubmit={this.onFormSubmit} >
                 <label htmlFor="name">Name</label>
                 <input
                     type="text"
@@ -61,8 +75,11 @@ class Form extends Component {
                     type="number"
                     name="time"
                     id="time"
+                    placeholder="Time"
                     value={user.time}
+                  
                     onChange={this.handleChange} />
+                   
                 <label htmlFor="pto">PTO/Holiday</label>
                 <input
                     type="number"
@@ -70,13 +87,17 @@ class Form extends Component {
                     id="pto"
                     value={user.pto}
                     onChange={this.handleChange} />
+                    
                 <button type="submit">
                     Submit
-                </button>
+                
+             </button>
             </form>
+            </div>
         );
     }
 }
+
 
 function mapStateToProps(state) {
     return {
@@ -84,4 +105,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Form);
+export default connect(mapStateToProps)(user);
