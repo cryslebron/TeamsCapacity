@@ -1,4 +1,4 @@
-I've created an app to help me as a Scrum master to caluculate a Scrum team's capacity. 
+I've created an app to help me as a Scrum master to calculate a Scrum team's capacity. 
 Before I was using an excel sheet in which each sprint I would Update. I have converted my Excel sheet into a site. 
 ExcelSheet 
 
